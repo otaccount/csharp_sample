@@ -37,5 +37,52 @@ namespace csharp_sample.basic
                 Console.WriteLine("Even");
             }
         }
+
+        public void Sample03()
+        {
+            int k = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(k * 1500);
+        }
+
+        public void Sample04()
+        {
+            int N = int.Parse(Console.ReadLine());
+            List<int> nList = new List<int>();
+            for (int i = 0; i < N; i++)
+            {
+                nList.Add(int.Parse(Console.ReadLine()));
+            }
+
+            int pos = 1;
+            int move = 0;
+            foreach (int n in nList)
+            {
+                move += Math.Abs(pos - n);
+                pos = n;
+            }
+
+            Console.WriteLine(move);
+        }
+
+        public void Sample05()
+        {
+            int N = int.Parse(Console.ReadLine());
+            List<int> nList = new List<int>();
+            for (int i = 0; i < N; i++)
+            {
+                nList.Add(int.Parse(Console.ReadLine()));
+            }
+
+            int pos = 1;
+            int move = 0;
+            foreach (int n in nList)
+            {
+                move += Math.Abs(pos - n);
+                pos = n;
+            }
+
+            Console.WriteLine(move);
+        }
     }
 }
