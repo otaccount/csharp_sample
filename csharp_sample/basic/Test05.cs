@@ -6,9 +6,9 @@ using System.Runtime.CompilerServices;
 
 namespace csharp_sample
 {
-    public class Program
+    public class Test05
     {
-        static void Main(string[] args)
+        static void Test05Main(string[] args)
         {
             // 木の本数, 必要な平均個数
             int N, M;
@@ -24,29 +24,29 @@ namespace csharp_sample
 
             // 始点と終点
             var list = new List<int[]>();
-            for(int i=0; i<Q; i++)
+            for (int i = 0; i < Q; i++)
             {
                 list.Add(Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse));
             }
 
-            foreach(var i in list)
+            foreach (var i in list)
             {
-                var start = i[0]-1;
-                var end = i[1]-1;
+                var start = i[0] - 1;
+                var end = i[1] - 1;
 
                 var avg = 0;
-                for(var j=start; j<end+1; j++)
+                for (var j = start; j < end + 1; j++)
                 {
-                    avg += lights[j]; 
+                    avg += lights[j];
                 }
-                avg = avg / (end+1 - start);
+                avg = avg / (end + 1 - start);
 
                 int n = 0;
-                for(var j=start; j<end+1; j++)
+                for (var j = start; j < end + 1; j++)
                 {
                     if (avg < M)
                     {
-                        if(M - avg > n)
+                        if (M - avg > n)
                         {
                             n = M - avg;
                         }
@@ -59,8 +59,8 @@ namespace csharp_sample
                 }
             }
 
-            var first = True;
-            foreach(var i in lights)
+            var first = true;
+            foreach (var i in lights)
             {
                 if (!first)
                 {
